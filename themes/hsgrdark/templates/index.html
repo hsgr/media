@@ -2,19 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
     <title>{{ album.title }}</title>
     <meta name="description" content="">
     <meta name="author" content="{{ author }}">
     <meta name="viewport" content="width=device-width">
 
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Sans">
     <link rel="stylesheet" href="{{ theme.url }}/css/style.min.css">
-    <link rel="stylesheet" href="https://www.hackerspace.gr/static/css/font-awesome.min.css">
-    <!--[if lt IE 9]>
-        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" href="{{ theme.url }}/css/font-awesome.min.css">
     <link rel="shortcut icon" href="{{ theme.url }}/favicon.ico">
   </head>
   <body>
@@ -34,7 +29,7 @@
           {% endif %}
           <footer>
             <p><!--{% if author %}&copy; {{ author }} - {% endif %}-->
-	      <span class="fa fa-cc"></span> <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Attribution-ShareAlike</a>.</p>
+	      <span class="fa fa-cc"></span> <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Attribution-ShareAlike</a></p>
           </footer>
         </div>
       </div>
@@ -146,8 +141,7 @@
     </div>
 
     {% if album.medias %}
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script>!window.jQuery && document.write(unescape('%3Cscript src="{{ theme.url }}/js/jquery-1.10.2.min.js"%3E%3C/script%3E'))</script>
+    <script src="{{ theme.url }}/js/jquery-1.10.2.min.js"></script>
     <script src="{{ theme.url }}/js/jquery.colorbox.min.js"></script>
 
     <script>
@@ -179,6 +173,5 @@
       });
     </script>
     {% endif %}
-    {% include 'analytics.html' %}
   </body>
 </html>

@@ -95,10 +95,10 @@ thumb_size = (280, 210)
 
 # Attribute of Media objects which is used to sort medias. 'date' can be used
 # to sort with EXIF dates.
-# medias_sort_attr = 'filename'
+medias_sort_attr = 'date'
 
 # Reverse sort for medias
-# medias_sort_reverse = False
+medias_sort_reverse = True
 
 # Filter directories and files.
 # The settings take a list of patterns matched with the fnmatch module on the

@@ -125,7 +125,7 @@ webm_options = ['-crf', '10', '-b:v', '1.6M',
                 '-qmin', '4', '-qmax', '63']
 
 # Size of resized video (default: (480, 360))
-video_size = (480, 360)
+video_size = (800, 600)
 
 # Write HTML files. If False, sigal will only process the images.
 # write_html = True

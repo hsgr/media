@@ -23,7 +23,7 @@ destination = 'public'
 
 # Theme :
 # - colorbox (default), galleria, or the path to a custom theme directory
-theme = './themes/hsgr'
+theme = './themes/hsgr2'
 
 # Use originals in gallery (default: False). If True, this will bypass all
 # processing steps (resize, auto-orient, recompress, and any plugin-specific
@@ -36,7 +36,7 @@ theme = './themes/hsgr'
 # ----------------
 
 # Size of resized image (default: (640, 480))
-img_size = (800, 600)
+img_size = (1000, 800)
 
 # Pilkit processor used to resize the image
 # (see http://pilkit.readthedocs.org/en/latest/#processors)
@@ -121,11 +121,11 @@ ignore_files = []
 # http://ffmpeg.org/trac/ffmpeg/wiki/vpxEncodingGuide
 # Be aware of the fact these options need to be passed as strings. If you are
 # using avconv (for example with Ubuntu), you will need to adapt the settings.
-webm_options = ['-crf', '10', '-b:v', '1.6M',
-                '-qmin', '4', '-qmax', '63']
+webm_options = ['-crf', '6', '-b:v', '2M',
+                '-qmin', '1', '-qmax', '40']
 
 # Size of resized video (default: (480, 360))
-video_size = (800, 600)
+video_size = (1000, 800)
 
 # Write HTML files. If False, sigal will only process the images.
 # write_html = True

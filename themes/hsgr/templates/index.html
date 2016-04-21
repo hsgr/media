@@ -17,7 +17,7 @@
       <div class="four columns">
         <div class="sidebar">
           <h1><a href="{{ album.index_url }}"><img src="{{ theme.url }}/images/hsgr.png" alt="{{ index_title }}"></a></h1>
-	  <p>A collection of videos and photos by <a href="https://www.hackerspace.gr/" target="_blank">Hackerspace.gr</a>
+          <p>A collection of videos and photos by <a href="https://www.hackerspace.gr/" target="_blank">Hackerspace.gr</a>
           {% if settings.links %}
           <nav id="menu">
             <ul>
@@ -28,8 +28,12 @@
           </nav>
           {% endif %}
           <footer>
-            <p><!--{% if author %}&copy; {{ author }} - {% endif %}-->
-	      <span class="fa fa-cc"></span> <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Attribution-ShareAlike</a></p>
+            <p>
+              <span class="fa fa-envelope-o"> <img src="{{ theme.url }}/images/email.png" alt="media" class="email">
+            </p>
+            <p>
+	            <span class="fa fa-cc"></span> <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Attribution-ShareAlike</a>
+            </p>
           </footer>
         </div>
       </div>
@@ -89,7 +93,7 @@
               {% if 'sigal.plugins.media_page' in settings.plugins %}
               <a href="{{ media.filename}}.html" class="gallery"
                 title="{{ media.title if media.title else media.filename }}"
-                data-href="{{ media.filename }}" {{ img_description(media) }}> 
+                data-href="{{ media.filename }}" {{ img_description(media) }}>
               {% else %}
               <a href="{{ media.filename }}" class="gallery" title="{{ media.filename }}" {{ img_description(media) }}>
               {% endif %}

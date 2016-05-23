@@ -79,9 +79,9 @@
           {%- endmacro %}
         {% if settings.show_map and album.show_map %}
           <div class="icons">
-            <a class="gallery-map-toggle"><img src="{{ theme.url }}/img/map.png"
+            <a class="gallery-map-toggle"><img src="{{ theme.url }}/images/map.png"
               title="Show/Hide map" alt="Show/Hide Map" /></a>
-            <a id="fullscreen"><img src="{{ theme.url }}/img/fullscreen.png"
+            <a id="fullscreen"><img src="{{ theme.url }}/images/fullscreen.png"
               title="Fullscreen" alt="Fullscreen" /></a>
           </div>
         {% endif %}
@@ -96,7 +96,7 @@
               </a>
             {% endif %}
             {% if media.type == "video" %}
-              <a href="{{ theme.url }}/img/empty.png">
+              <a href="{{ theme.url }}/images/empty.png">
                 <img src="{{ media.thumbnail }}" alt="{{ media.filename }}"
                     data-title="{{ media.title if media.title else media.filename }}"
                     data-description="{{ img_description(media) }}"

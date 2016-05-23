@@ -29,14 +29,14 @@ theme = './themes/hsgr2'
 # processing steps (resize, auto-orient, recompress, and any plugin-specific
 # step).
 # Originals will be symlinked if orig_link = True, else they will be copied.
-# use_orig = False
+use_orig = True
 
 # ----------------
 # Image processing (ignored if use_orig = True)
 # ----------------
 
 # Size of resized image (default: (640, 480))
-img_size = (1000, 800)
+#img_size = (1000, 700)
 
 # Pilkit processor used to resize the image
 # (see http://pilkit.readthedocs.org/en/latest/#processors)
@@ -54,6 +54,12 @@ img_size = (1000, 800)
 
 # If True, EXIF data from the original image is copied to the resized image
 # copy_exif_data = False
+
+# Jpeg options
+#jpg_options = {'quality': 93,
+#               'optimize': True,
+#               'progressive': True}
+
 
 # --------------------
 # Thumbnail generation
@@ -76,6 +82,9 @@ thumb_size = (280, 210)
 
 # Crop the image to fill the box
 # thumb_fit = True
+
+# Delay in seconds to avoid black thumbnails in videos with fade-in
+thumb_video_delay = '10'
 
 # -------------
 # Album options
@@ -107,25 +116,35 @@ medias_sort_reverse = True
 ignore_directories = []
 ignore_files = []
 
+
 # -------------
-# Miscellaneous
+# Video options
 # -------------
 
-# Jpeg options
-# jpg_options = {'quality': 85,
-#                'optimize': True,
-#                'progressive': True}
+# Video format
+# specify an alternative format, valid are 'webm' (default) and 'mp4'
+#video_format = 'mp4'
 
 # Webm options
 # Options used in ffmpeg to encode the webm video. You may want to read
 # http://ffmpeg.org/trac/ffmpeg/wiki/vpxEncodingGuide
 # Be aware of the fact these options need to be passed as strings. If you are
 # using avconv (for example with Ubuntu), you will need to adapt the settings.
-webm_options = ['-crf', '6', '-b:v', '2M',
-                '-qmin', '1', '-qmax', '40']
+# webm_options = ['-crf', '10', '-b:v', '1.6M',
+#                 '-qmin', '4', '-qmax', '63']
+
+# MP4 options
+# Options used to encode the mp4 video. You may want to read
+# https://trac.ffmpeg.org/wiki/Encode/H.264
+#mp4_options = ['-crf', '10' , '-c:a', 'copy']
 
 # Size of resized video (default: (480, 360))
-video_size = (1000, 800)
+#video_size = (1000, 700)
+
+
+# -------------
+# Miscellaneous
+# -------------
 
 # Write HTML files. If False, sigal will only process the images.
 # write_html = True

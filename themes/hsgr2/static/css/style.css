@@ -177,7 +177,7 @@ header img {
 
 #gallery video {
     position: absolute;
-    top: 10%;
+    top: 0;
     width: 100%;
     margin: 0 auto;
 }
@@ -186,6 +186,22 @@ header img {
     background-color: #333;
 }
 
+.galleria-layer {
+    width: 90% !important;
+    height: 100% !important;
+    margin: auto !important;
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+}
+
+@media only screen and (min-width: 980px) {
+    .galleria-layer {
+        height: 100% !important;
+    }
+}
 
 /* fullscreen display link */
 
